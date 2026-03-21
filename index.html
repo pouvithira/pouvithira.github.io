@@ -9,38 +9,46 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #f8f9fb;
+      background: #ffffff;
       color: #222;
+      line-height: 1.6;
     }
 
+    /* NAVBAR */
     nav {
       display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background: white;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
       border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
+      background: white;
     }
 
     nav a {
-      margin-left: 20px;
       text-decoration: none;
       color: #333;
       font-size: 14px;
+      font-weight: 500;
     }
 
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    /* HERO */
     header {
-      padding: 100px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 42px;
+      font-size: 34px;
     }
 
     header p {
@@ -51,76 +59,72 @@
     .btn {
       margin-top: 20px;
       display: inline-block;
-      padding: 12px 25px;
+      padding: 10px 20px;
       background: #00adb5;
       color: white;
-      border-radius: 25px;
+      border-radius: 20px;
       text-decoration: none;
+      font-size: 14px;
     }
 
+    /* SECTIONS */
     section {
-      max-width: 1100px;
+      max-width: 750px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     h2 {
       margin-bottom: 20px;
+      font-size: 22px;
     }
 
-    /* PROJECT STYLE */
+    /* PROJECTS */
     .project {
-      background: white;
-      padding: 30px;
-      margin-bottom: 50px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
     }
 
-    .tags span {
-      background: #eee;
-      padding: 6px 12px;
-      margin-right: 8px;
-      border-radius: 20px;
-      font-size: 12px;
+    .project h3 {
+      margin-bottom: 8px;
     }
 
-    .project-layout {
-      display: flex;
-      gap: 30px;
-      margin-top: 25px;
-      flex-wrap: wrap;
-    }
-
-    .images {
-      flex: 1;
-    }
-
-    .images img {
-      width: 100%;
-      border-radius: 10px;
+    .desc {
+      color: #555;
       margin-bottom: 10px;
     }
 
-    .details {
-      flex: 1;
+    .project p {
+      font-size: 14px;
+      margin: 6px 0;
     }
 
-    .details ul {
-      padding-left: 20px;
-      color: #555;
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00adb5;
+      text-decoration: none;
+      font-weight: 600;
     }
 
+    /* CONTACT */
+    .contact p {
+      margin: 6px 0;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
-      background: #111;
-      color: white;
+      border-top: 1px solid #eee;
+      font-size: 13px;
     }
 
-    @media(max-width: 768px){
+    /* MOBILE */
+    @media (max-width: 600px) {
       header h1 {
-        font-size: 30px;
+        font-size: 26px;
       }
     }
 
@@ -129,132 +133,82 @@
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div><strong>Pouvithira</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <header>
-  <h1>UI/UX Designer 👋</h1>
-  <p>Designing clean, simple and meaningful user experiences</p>
+  <h1>Hi, I'm Pouvithira 👋</h1>
+  <p>UI/UX Designer focused on simple and user-friendly design</p>
   <a href="resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a passionate UI/UX designer with experience in Figma, wireframing,
-    and building user-friendly interfaces. I focus on solving real user problems
-    through clean and effective design.
+    I am a UI/UX designer with experience in wireframing, prototyping, and high-fidelity design using Figma. 
+    I enjoy solving user problems and creating clean, meaningful digital experiences.
   </p>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
-  <!-- PROJECT 1 -->
   <div class="project">
     <h3>Website Redesign</h3>
-    <p>Improved navigation and usability with a structured layout.</p>
+    <p class="desc">
+      Redesigned an existing website to improve usability and user flow.
+    </p>
 
-    <div class="tags">
-      <span>UI Redesign</span>
-      <span>Figma</span>
-      <span>UX</span>
-    </div>
+    <p><strong>Problem:</strong> Confusing navigation and poor layout structure.</p>
+    <p><strong>Solution:</strong> Created a clear layout with better hierarchy and spacing.</p>
+    <p><strong>Design:</strong> Clean UI with structured sections and improved readability.</p>
 
-    <div class="project-layout">
-      <div class="images">
-        <img src="project1.png">
-      </div>
-
-      <div class="details">
-        <h4>Design Notes</h4>
-        <ul>
-          <li>Improved navigation clarity</li>
-          <li>Better layout hierarchy</li>
-          <li>Clean UI structure</li>
-        </ul>
-
-        <br>
-        <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-          View Prototype →
-        </a>
-      </div>
-    </div>
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
+      View Prototype →
+    </a>
   </div>
 
-  <!-- PROJECT 2 -->
   <div class="project">
     <h3>Modern Website Redesign</h3>
-    <p>Transformed outdated UI into modern clean experience.</p>
+    <p class="desc">
+      Transformed an outdated website into a modern and clean design.
+    </p>
 
-    <div class="tags">
-      <span>UI Design</span>
-      <span>Modern UI</span>
-      <span>Figma</span>
-    </div>
+    <p><strong>Problem:</strong> Old UI and low visual appeal.</p>
+    <p><strong>Solution:</strong> Redesigned using modern layout and better typography.</p>
+    <p><strong>Design:</strong> Minimal style with improved spacing and clarity.</p>
 
-    <div class="project-layout">
-      <div class="images">
-        <img src="project2.png">
-      </div>
-
-      <div class="details">
-        <h4>Design Notes</h4>
-        <ul>
-          <li>Modern visual style</li>
-          <li>Improved spacing</li>
-          <li>Better readability</li>
-        </ul>
-
-        <br>
-        <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-          View Prototype →
-        </a>
-      </div>
-    </div>
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
+      View Prototype →
+    </a>
   </div>
 
-  <!-- PROJECT 3 -->
   <div class="project">
     <h3>Makeup Artist Website</h3>
-    <p>Designed elegant portfolio website for beauty services.</p>
+    <p class="desc">
+      Designed a full website for a makeup artist to showcase services.
+    </p>
 
-    <div class="tags">
-      <span>UI/UX</span>
-      <span>Website</span>
-      <span>Figma</span>
-    </div>
+    <p><strong>Problem:</strong> No professional online presence.</p>
+    <p><strong>Solution:</strong> Created a clean and elegant website design.</p>
+    <p><strong>Design:</strong> Visual-focused layout with simple navigation.</p>
 
-    <div class="project-layout">
-      <div class="images">
-        <img src="project3.png">
-      </div>
-
-      <div class="details">
-        <h4>Design Notes</h4>
-        <ul>
-          <li>Elegant UI design</li>
-          <li>Visual-focused layout</li>
-          <li>Simple navigation</li>
-        </ul>
-
-        <br>
-        <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-          View Prototype →
-        </a>
-      </div>
-    </div>
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
+      View Prototype →
+    </a>
   </div>
 
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Email: pouvithira@gmail.com</p>
   <p>Phone: +91 7358998357</p>
