@@ -4,66 +4,132 @@
   <title>Pouvithira | UI/UX Designer</title>
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
     }
 
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
     nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
     }
 
     nav a {
-      color: #333;
-      margin: 0 15px;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    /* HERO */
     header {
-      padding: 100px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #00adb5, #007b83);
-      color: white;
-    }
-
-    section {
-      padding: 60px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.5s ease;
       text-align: center;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px;
-      display: inline-block;
-      border-radius: 12px;
-      width: 250px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.8;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #00adb5;
+      border-radius: 25px;
       color: white;
-      border-radius: 6px;
       text-decoration: none;
+      transition: 0.3s;
     }
 
-    footer {
-      background: #222;
-      color: white;
-      padding: 20px;
+    .btn:hover {
+      background: #007b83;
+      transform: scale(1.05);
+    }
+
+    /* SECTION */
+    section {
+      padding: 80px 20px;
       text-align: center;
     }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    /* GLASS CARD */
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 15px;
+      display: inline-block;
+      width: 260px;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    /* PROJECT IMAGE */
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* GRID */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
   </style>
 </head>
 
@@ -79,13 +145,13 @@
 
 <header id="home">
   <h1>Hi, I'm Pouvithira 👋</h1>
-  <p>UI/UX Designer | Creating User-Friendly Experiences</p>
+  <p>UI/UX Designer | Creating Modern Digital Experiences</p>
   <a href="#projects" class="btn">View My Work</a>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
+  <p style="max-width:600px;margin:auto;">
     Creative UI/UX designer with experience in wireframing, prototyping, and high-fidelity design using Figma. 
     Passionate about user-centered design and building meaningful digital products.
   </p>
@@ -93,20 +159,25 @@
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="card">Figma</div>
-  <div class="card">Wireframing</div>
-  <div class="card">Prototyping</div>
-  <div class="card">User Research</div>
-  <div class="card">HTML & CSS</div>
+  <div class="grid">
+    <div class="card">Figma</div>
+    <div class="card">Wireframing</div>
+    <div class="card">Prototyping</div>
+    <div class="card">User Research</div>
+    <div class="card">HTML & CSS</div>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>Gear On - Bike Rental App</h3>
-    <p>Designed a mobile app for easy bike rentals with intuitive navigation.</p>
-    <a href="https://www.behance.net/gallery/237860849/Gear-On" class="btn">View Case Study</a>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="">
+      <h3>Gear On - Bike Rental App</h3>
+      <p>Modern mobile UI for bike rentals</p>
+      <a href="https://www.behance.net/gallery/237860849/Gear-On" class="btn">View</a>
+    </div>
   </div>
 
 </section>
