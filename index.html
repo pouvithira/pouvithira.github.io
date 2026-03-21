@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Pouvithira | UI/UX Designer</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,229 +9,173 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #f7f9fb;
-      color: #333;
-      line-height: 1.6;
+      background: #ffffff;
+      color: #222;
     }
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
+      justify-content: space-between;
+      padding: 20px 40px;
       background: white;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      flex-wrap: wrap;
+      border-bottom: 1px solid #eee;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #00adb5;
+      margin-left: 20px;
+      font-weight: 500;
     }
 
     header {
-      padding: 90px 20px;
+      padding: 100px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #00adb5, #007b83);
-      color: white;
     }
 
     header h1 {
-      font-size: 34px;
+      font-size: 42px;
     }
 
     header p {
       margin-top: 10px;
-      font-size: 16px;
+      color: #555;
     }
 
     .btn {
-      display: inline-block;
       margin-top: 20px;
-      padding: 10px 20px;
-      background: white;
-      color: #007b83;
-      border-radius: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00adb5;
+      color: white;
+      border-radius: 30px;
       text-decoration: none;
-      font-size: 14px;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      padding: 60px 20px;
     }
 
     h2 {
       margin-bottom: 20px;
-      color: #00adb5;
-    }
-
-    .box {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .project {
-      margin-bottom: 25px;
+      margin-bottom: 60px;
     }
 
-    .project h3 {
-      margin-bottom: 10px;
+    .project img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0;
     }
 
     .project p {
-      font-size: 14px;
-      margin: 6px 0;
       color: #555;
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #00adb5;
-      text-decoration: none;
-      font-weight: 600;
+      margin: 5px 0;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
+      background: #111;
       color: white;
     }
 
-    /* Animation */
-    .fade {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.8s ease;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <div><strong>Pouvithira</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <header>
-  <h1>Hi, I'm Pouvithira 👋</h1>
-  <p>UI/UX Designer focused on creating simple and meaningful user experiences</p>
+  <h1>UI/UX Designer 👋</h1>
+  <p>Designing simple, clean and meaningful digital experiences</p>
+
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
-<section id="about" class="fade">
+<section id="about">
   <h2>About Me</h2>
-  <div class="box">
-    <p>
-      I am a passionate UI/UX designer with hands-on experience in wireframing, prototyping,
-      and high-fidelity design using Figma. I enjoy solving real-world problems through design
-      and creating user-friendly digital experiences.
-    </p>
-  </div>
+  <p>
+    I am a UI/UX designer passionate about creating user-friendly and modern interfaces.
+    I have experience in Figma, wireframing, and building meaningful design solutions.
+  </p>
 </section>
 
-<section id="experience" class="fade">
-  <h2>Experience</h2>
+<section id="projects">
 
-  <div class="box">
-    <h3>UI/UX Designer Intern</h3>
-    <p><strong>Duhzine IT Solutions</strong> (Dec 2025 – Mar 2026)</p>
-    <p>
-      Worked on live website projects and team-based product design.
-      Conducted UI audits and improved layout, usability, and user flow.
-    </p>
-  </div>
-
-  <div class="box">
-    <h3>Quality Controller</h3>
-    <p><strong>Integra Software Solutions</strong> (2023 – 2025)</p>
-    <p>
-      Ensured product quality, identified defects, and maintained quality reports.
-    </p>
-  </div>
-
-</section>
-
-<section id="projects" class="fade">
   <h2>Projects</h2>
 
-  <div class="box project">
+  <!-- Project 1 -->
+  <div class="project">
     <h3>Website Redesign</h3>
-    <p><strong>Problem:</strong> Poor navigation and confusing layout</p>
-    <p><strong>Solution:</strong> Improved structure and usability</p>
-    <p><strong>Role:</strong> UI Design, Wireframing</p>
-    <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=3-2&t=p07YxxNvG6isz5gH-1" target="_blank">View Design →</a>
+
+    <img src="project1.png">
+
+    <p><strong>Problem:</strong> Poor navigation and confusing UI</p>
+    <p><strong>Solution:</strong> Improved layout and usability</p>
+
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">View Prototype →</a>
+    <br>
+    <a href="project1.html">View Case Study →</a>
   </div>
 
-  <div class="box project">
+  <!-- Project 2 -->
+  <div class="project">
     <h3>Modern Website Redesign</h3>
-    <p><strong>Problem:</strong> Outdated UI and low engagement</p>
-    <p><strong>Solution:</strong> Modern clean design with better UX</p>
-    <p><strong>Role:</strong> UI/UX Design</p>
-    <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-223&t=p07YxxNvG6isz5gH-1" target="_blank">View Design →</a>
+
+    <img src="project2.png">
+
+    <p><strong>Problem:</strong> Outdated design</p>
+    <p><strong>Solution:</strong> Modern UI with better UX</p>
+
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">View Prototype →</a>
+    <br>
+    <a href="project2.html">View Case Study →</a>
   </div>
 
-  <div class="box project">
+  <!-- Project 3 -->
+  <div class="project">
     <h3>Makeup Artist Website</h3>
-    <p><strong>Problem:</strong> No professional online presence</p>
-    <p><strong>Solution:</strong> Elegant and user-friendly website design</p>
-    <p><strong>Role:</strong> Full UI/UX Design</p>
+
+    <img src="project3.png">
+
+    <p><strong>Problem:</strong> No online presence</p>
+    <p><strong>Solution:</strong> Elegant portfolio website</p>
+
+    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">View Prototype →</a>
+    <br>
     <a href="makeup.html">View Case Study →</a>
   </div>
 
 </section>
 
-<section id="contact" class="fade">
+<section id="contact">
   <h2>Contact</h2>
-  <div class="box">
-    <p>Email: pouvithira@gmail.com</p>
-    <p>Phone: +91 7358998357</p>
-    <p>LinkedIn: linkedin.com/in/pouvithirav</p>
-  </div>
+  <p>Email: pouvithira@gmail.com</p>
+  <p>Phone: +91 7358998357</p>
 </section>
 
 <footer>
   <p>© 2026 Pouvithira</p>
 </footer>
-
-<script>
-  const faders = document.querySelectorAll('.fade');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  faders.forEach(fade => observer.observe(fade));
-</script>
 
 </body>
 </html>
