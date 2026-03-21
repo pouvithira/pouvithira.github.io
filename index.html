@@ -155,7 +155,19 @@
       font-size: 13px;
     }
 
-    /* MOBILE FIX */
+    /* ANIMATION */
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.8s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
     @media (max-width: 600px) {
       header h1 {
         font-size: 26px;
@@ -163,10 +175,6 @@
 
       header p {
         font-size: 14px;
-      }
-
-      nav {
-        gap: 15px;
       }
     }
 
@@ -191,7 +199,7 @@
 </header>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="fade">
   <h2>About Me</h2>
   <p style="max-width:600px;margin:auto;">
     Creative UI/UX designer with experience in wireframing, prototyping, and high-fidelity design using Figma. 
@@ -200,7 +208,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="fade">
   <h2>Projects</h2>
 
   <div class="grid">
@@ -209,28 +217,34 @@
       <img src="project1.png" alt="">
       <h3>Website Redesign</h3>
       <p>Improved navigation and usability with clean UI</p>
-      <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=3-2&t=p07YxxNvG6isz5gH-1" target="_blank">View</a>
+      <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=3-2&t=p07YxxNvG6isz5gH-1" target="_blank">
+        View
+      </a>
     </div>
 
     <div class="card">
       <img src="project2.png" alt="">
       <h3>Modern Website Redesign</h3>
       <p>Upgraded UI with modern visuals and better UX</p>
-      <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-223&t=p07YxxNvG6isz5gH-1" target="_blank">View</a>
+      <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-223&t=p07YxxNvG6isz5gH-1" target="_blank">
+        View
+      </a>
     </div>
 
     <div class="card">
       <img src="project3.png" alt="">
       <h3>Makeup Artist Website</h3>
       <p>Elegant portfolio design for beauty services</p>
-      <a href="https://www.figma.com/design/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-942&t=p07YxxNvG6isz5gH-1" target="_blank">View</a>
+      <a href="makeup.html">
+        Case Study
+      </a>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact" class="fade contact">
   <h2>Contact</h2>
   <p>Email: pouvithira@gmail.com</p>
   <p>Phone: +91 7358998357</p>
@@ -240,6 +254,21 @@
 <footer>
   <p>© 2026 Pouvithira</p>
 </footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+  const faders = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  faders.forEach(fade => observer.observe(fade));
+</script>
 
 </body>
 </html>
