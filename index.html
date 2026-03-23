@@ -4,7 +4,7 @@
   <title>Pouvithira | UI/UX Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -19,6 +19,7 @@
       background: #f7f9fc;
       color: #222;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     /* NAV */
@@ -98,7 +99,7 @@
       font-size: 16px;
     }
 
-    /* PROJECT CARDS */
+    /* PROJECT */
     .project {
       background: white;
       padding: 25px;
@@ -168,6 +169,18 @@
       color: #666;
     }
 
+    /* SCROLL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* MOBILE */
     @media (max-width: 600px) {
       nav {
@@ -195,14 +208,14 @@
 </nav>
 
 <!-- HERO -->
-<header>
+<header class="reveal">
   <h1>Hi, I'm Pouvithira 👋</h1>
   <p>UI/UX Designer focused on simple and user-friendly design</p>
   <a href="resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="reveal">
   <h2>About Me</h2>
 
   <p>
@@ -216,8 +229,7 @@
   </p>
 
   <p>
-    Previously worked as a <strong>Quality Controller at Integra Software Solutions</strong>,
-    developing strong attention to detail.
+    Previously worked as a <strong>Quality Controller at Integra Software Solutions</strong>.
   </p>
 
   <h3>Skills</h3>
@@ -228,7 +240,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="reveal">
   <h2>Projects</h2>
 
   <div class="project">
@@ -261,7 +273,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="reveal">
   <h2>Contact</h2>
 
   <div class="contact">
@@ -274,6 +286,25 @@
 <footer>
   <p>© 2026 Pouvithira</p>
 </footer>
+
+<!-- SCROLL SCRIPT -->
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+</script>
 
 </body>
 </html>
