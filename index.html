@@ -4,16 +4,19 @@
   <title>Pouvithira | UI/UX Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #ffffff;
+      background: #f7f9fc;
       color: #222;
       line-height: 1.6;
     }
@@ -21,20 +24,20 @@
     /* NAV */
     nav {
       display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
-      border-bottom: 1px solid #eee;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: white;
       position: sticky;
       top: 0;
-      background: white;
+      border-bottom: 1px solid #eee;
     }
 
     nav a {
+      margin-left: 20px;
       text-decoration: none;
       color: #333;
       font-size: 14px;
-      font-weight: 500;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -43,40 +46,44 @@
 
     /* HERO */
     header {
-      padding: 80px 20px;
       text-align: center;
+      padding: 100px 20px;
     }
 
     header h1 {
-      font-size: 34px;
+      font-size: 42px;
     }
 
     header p {
-      margin-top: 10px;
       color: #555;
+      margin-top: 10px;
     }
 
     .btn {
       margin-top: 20px;
-      display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 25px;
       background: #00adb5;
       color: white;
-      border-radius: 20px;
+      border-radius: 25px;
       text-decoration: none;
-      font-size: 14px;
+      display: inline-block;
+      transition: 0.3s;
     }
 
-    /* SECTIONS */
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
     section {
-      max-width: 750px;
+      max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
       margin-bottom: 20px;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     /* ABOUT */
@@ -87,19 +94,26 @@
     }
 
     #about h3 {
-      font-size: 16px;
       margin-top: 15px;
+      font-size: 16px;
     }
 
-    /* PROJECTS */
+    /* PROJECT CARDS */
     .project {
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eee;
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
     }
 
     .project h3 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .desc {
@@ -117,37 +131,53 @@
       margin-top: 10px;
       color: #00adb5;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .project a:hover {
+      letter-spacing: 0.5px;
     }
 
     /* CONTACT */
-    .contact p {
-      margin: 6px 0;
+    .contact {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    /* FOOTER */
+    .contact p {
+      margin: 10px 0;
+    }
+
+    .contact a {
+      color: #00adb5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      border-top: 1px solid #eee;
       font-size: 13px;
+      color: #666;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
+      nav {
+        padding: 15px;
+      }
+
       header h1 {
-        font-size: 26px;
+        font-size: 28px;
       }
     }
-      .contact a {
-    color: #00adb5;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .contact a:hover {
-    text-decoration: underline;
-  }
 
   </style>
 </head>
@@ -156,9 +186,12 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <div><strong>Pouvithira</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -174,31 +207,24 @@
 
   <p>
     I am a passionate UI/UX designer with hands-on experience in wireframing,
-    prototyping, and high-fidelity design using Figma. I focus on creating
-    simple, user-friendly, and meaningful digital experiences that solve real
-    user problems.
+    prototyping, and high-fidelity design using Figma.
   </p>
 
   <p>
-    I recently completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>,
-    where I worked on real-time projects, improved website usability, and contributed
-    to design solutions that enhanced user experience and interface clarity.
+    I completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>,
+    where I worked on real-time projects and improved user experience.
   </p>
 
   <p>
-    I also have prior experience as a <strong>Quality Controller at Integra Software Solutions</strong>,
-    which helped me develop strong attention to detail and a deep understanding of product quality.
+    Previously worked as a <strong>Quality Controller at Integra Software Solutions</strong>,
+    developing strong attention to detail.
   </p>
 
   <h3>Skills</h3>
-  <p>
-    UI Design, UX Design, Wireframing, Prototyping, User Research, Usability Improvement
-  </p>
+  <p>UI Design, UX Design, Wireframing, Prototyping, User Research</p>
 
   <h3>Tools</h3>
-  <p>
-    Figma, Adobe XD, HTML, CSS
-  </p>
+  <p>Figma, Adobe XD, HTML, CSS</p>
 </section>
 
 <!-- PROJECTS -->
@@ -207,71 +233,44 @@
 
   <div class="project">
     <h3>Website Redesign</h3>
-    <p class="desc">Redesigned an existing website to improve usability and user flow.</p>
-
-    <p><strong>Problem:</strong> Confusing navigation and poor layout structure.</p>
-    <p><strong>Solution:</strong> Created a clear layout with better hierarchy and spacing.</p>
-    <p><strong>Design:</strong> Clean UI with structured sections and improved readability.</p>
-
-    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-      View Prototype →
-    </a>
+    <p class="desc">Improved usability and navigation.</p>
+    <p><strong>Problem:</strong> Confusing layout.</p>
+    <p><strong>Solution:</strong> Clear hierarchy.</p>
+    <p><strong>Design:</strong> Clean UI.</p>
+    <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
   </div>
 
   <div class="project">
     <h3>Modern Website Redesign</h3>
-    <p class="desc">Transformed an outdated website into a modern and clean design.</p>
-
-    <p><strong>Problem:</strong> Old UI and low visual appeal.</p>
-    <p><strong>Solution:</strong> Redesigned using modern layout and better typography.</p>
-    <p><strong>Design:</strong> Minimal style with improved spacing and clarity.</p>
-
-    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-      View Prototype →
-    </a>
+    <p class="desc">Converted outdated UI to modern design.</p>
+    <p><strong>Problem:</strong> Old visuals.</p>
+    <p><strong>Solution:</strong> Modern layout.</p>
+    <p><strong>Design:</strong> Minimal style.</p>
+    <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
   </div>
 
   <div class="project">
     <h3>Makeup Artist Website</h3>
-    <p class="desc">Designed a full website for a makeup artist to showcase services.</p>
-
-    <p><strong>Problem:</strong> No professional online presence.</p>
-    <p><strong>Solution:</strong> Created a clean and elegant website design.</p>
-    <p><strong>Design:</strong> Visual-focused layout with simple navigation.</p>
-
-    <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943&p=f&t=p07YxxNvG6isz5gH-0" target="_blank">
-      View Prototype →
-    </a>
+    <p class="desc">Designed full website for services.</p>
+    <p><strong>Problem:</strong> No online presence.</p>
+    <p><strong>Solution:</strong> Elegant website.</p>
+    <p><strong>Design:</strong> Visual-focused.</p>
+    <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
   </div>
 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact">
   <h2>Contact</h2>
 
-  <p>
-    Email: 
-    <a href="mailto:pouvithira@gmail.com">
-      pouvithira@gmail.com
-    </a>
-  </p>
-
-  <p>
-    Phone: 
-    <a href="tel:+917358998357">
-      +91 7358998357
-    </a>
-  </p>
-
-  <p>
-    LinkedIn: 
-    <a href="https://linkedin.com/in/pouvithirav" target="_blank">
-      linkedin.com/in/pouvithirav
-    </a>
-  </p>
-
+  <div class="contact">
+    <p>Email: <a href="mailto:pouvithira@gmail.com">pouvithira@gmail.com</a></p>
+    <p>Phone: <a href="tel:+917358998357">+91 7358998357</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/pouvithirav" target="_blank">linkedin.com/in/pouvithirav</a></p>
+  </div>
 </section>
+
 <footer>
   <p>© 2026 Pouvithira</p>
 </footer>
