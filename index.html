@@ -1,320 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pouvithira | UI/UX Designer</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Pouvithira | UI/UX Designer</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      background: #ffffff;
-      color: #222;
-      line-height: 1.7;
-      scroll-behavior: smooth;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
     }
 
-    /* HERO */
     header {
       text-align: center;
-      padding: 140px 20px 100px;
+      padding: 60px 20px;
     }
 
     header h1 {
-      font-size: 42px;
-      background: linear-gradient(90deg, #00adb5, #007b83);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    header p {
-      color: #666;
-      margin-top: 10px;
-    }
-
-    .btn-group {
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-      margin: 5px;
-      transition: 0.3s;
-    }
-
-    .primary {
-      background: linear-gradient(90deg, #00adb5, #007b83);
-      color: white;
-    }
-
-    .secondary {
-      border: 1px solid #00adb5;
-      color: #00adb5;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-      font-size: 26px;
-    }
-
-    /* ABOUT */
-    #about p {
-      margin-bottom: 14px;
-      color: #444;
-      font-size: 14px;
-    }
-
-    #about h3 {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #555;
-    }
-
-    /* PROJECT */
-    .project {
-      background: #fff;
-      padding: 28px;
-      margin-bottom: 35px;
-      border-radius: 15px;
-      border: 1px solid #eee;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    }
-
-    .project h3 {
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
-    .desc {
-      color: #666;
-      margin-bottom: 12px;
+    header p {
+      color: #94a3b8;
     }
 
-    .project p {
-      font-size: 14px;
-      margin: 8px 0;
-      color: #444;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .project-links {
-      margin-top: 12px;
+    h2 {
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
 
-    .link-btn {
-      margin-right: 15px;
-      color: #00adb5;
-      text-decoration: none;
-      font-weight: 500;
+    .projects {
+      display: grid;
+      gap: 25px;
     }
 
-    .figma-btn {
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: #f1f5f9;
-      color: #333;
-      text-decoration: none;
-      font-size: 12px;
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 14px;
       transition: 0.3s;
     }
 
-    .figma-btn:hover {
-      background: #00adb5;
-      color: white;
+    .card:hover {
+      transform: translateY(-6px);
+      background: #334155;
     }
 
-    /* CONTACT */
-    .contact {
-      background: #fff;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #eee;
+    .tag {
+      display: inline-block;
+      background: #334155;
+      padding: 5px 10px;
+      margin: 5px 5px 10px 0;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #cbd5f5;
     }
 
-    .contact p {
-      margin: 10px 0;
+    .buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    .buttons a.secondary {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
     }
 
     .contact a {
-      color: #00adb5;
+      color: #38bdf8;
       text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      font-size: 13px;
-      color: #777;
+      padding: 20px;
+      color: #64748b;
+      border-top: 1px solid #1e293b;
     }
 
-    /* ANIMATION */
     .reveal {
       opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.9s ease;
+      transform: translateY(30px);
+      transition: 0.6s ease;
     }
 
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header class="reveal">
-  <h1>Hi, I'm Pouvithira 👋</h1>
-  <p>
-    I design intuitive and user-centered digital experiences that solve real problems.<br>
-    Passionate about simplifying complex ideas through clean, functional interfaces.<br>
-    Focused on creating meaningful designs that improve usability and engagement.
-  </p>
-
-  <div class="btn-group">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
-  </div>
+  <h1>Pouvithira</h1>
+  <p>UI/UX Designer | Creating intuitive and user-friendly experiences</p>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="reveal">
+<section class="reveal">
   <h2>About Me</h2>
-
   <p>
-    I am a passionate UI/UX designer with hands-on experience in wireframing,
-    prototyping, and high-fidelity design using Figma.
+    I am a UI/UX designer focused on creating clean and user-friendly digital experiences.
+    I enjoy improving existing designs and making interfaces simple, clear, and easy to use.
   </p>
-
-  <p>
-    I completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>.
-  </p>
-
-  <p>
-    Previously worked as a <strong>Quality Controller at Integra Software Solutions</strong>.
-  </p>
-
-  <h3>Skills</h3>
-  <p>UI Design, UX Design, Wireframing, Prototyping, User Research</p>
-
-  <h3>Tools</h3>
-  <p>Figma, Adobe XD, HTML, CSS</p>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="reveal">
+<section class="reveal">
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Website Redesign</h3>
-    <p class="desc">Improved usability and navigation.</p>
-    <p><strong>Problem:</strong> Confusing layout and poor structure.</p>
-    <p><strong>Solution:</strong> Improved hierarchy and simplified navigation.</p>
-    <p><strong>Outcome:</strong> Better user experience.</p>
+  <div class="projects">
 
-    <div class="project-links">
-      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3" target="_blank" class="link-btn">View Prototype →</a>
-      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+  <!-- Project 1 -->
+  <div class="card">
+    <h3>Project 1</h3>
+    <p>Designed a user-friendly mobile app interface with improved navigation.</p>
+
+    <div class="tag">UI Design</div>
+    <div class="tag">Mobile App</div>
+
+    <div class="buttons">
+      <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
+      <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
     </div>
   </div>
 
-  <div class="project">
-    <h3>Modern Website Redesign</h3>
-    <p class="desc">Modern UI transformation.</p>
-    <p><strong>Problem:</strong> Outdated design.</p>
-    <p><strong>Solution:</strong> Clean modern layout.</p>
-    <p><strong>Outcome:</strong> Better engagement.</p>
+  <!-- Project 2 -->
+  <div class="card">
+    <h3>Project 2</h3>
+    <p>Created a clean and modern dashboard design focusing on usability and clarity.</p>
 
-    <div class="project-links">
-      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225" target="_blank" class="link-btn">View Prototype →</a>
-      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+    <div class="tag">Dashboard</div>
+    <div class="tag">UI Design</div>
+
+    <div class="buttons">
+      <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
+      <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
     </div>
   </div>
 
-  <div class="project">
-    <h3>Makeup Artist Website</h3>
-    <p class="desc">Designed service showcase website.</p>
-    <p><strong>Problem:</strong> No online presence.</p>
-    <p><strong>Solution:</strong> Elegant design.</p>
-    <p><strong>Outcome:</strong> Strong brand identity.</p>
+  <!-- Project 3 -->
+  <div class="card">
+    <h3>Project 3</h3>
+    <p>Redesigned a website to improve user experience and simplify navigation.</p>
 
-    <div class="project-links">
-      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943" target="_blank" class="link-btn">View Prototype →</a>
-      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+    <div class="tag">UX Design</div>
+    <div class="tag">Redesign</div>
+
+    <div class="buttons">
+      <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
+      <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
     </div>
   </div>
 
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="reveal">
-  <h2>Contact</h2>
+<section class="reveal">
+  <h2>Let's Work Together</h2>
+  <p>Feel free to reach out for UI/UX opportunities or collaborations.</p>
 
   <div class="contact">
-    <p>Email: <a href="mailto:pouvithira@gmail.com">pouvithira@gmail.com</a></p>
-    <p>Phone: <a href="tel:+917358998357">+91 7358998357</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/pouvithirav" target="_blank">linkedin.com/in/pouvithirav</a></p>
+    <p>📧 Email: <a href="mailto:pouvithira@gmail.com">pouvithira@gmail.com</a></p>
+    <p>📱 Phone: <a href="tel:+917358998357">+91 7358998357</a></p>
+    <p>💼 LinkedIn: <a href="https://linkedin.com/in/pouvithirav" target="_blank">linkedin.com/in/pouvithirav</a></p>
+    <p>💻 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Pouvithira</p>
+  <p>© 2026 Pouvithira | UI/UX Designer</p>
 </footer>
 
 <script>
   function revealOnScroll() {
     const reveals = document.querySelectorAll(".reveal");
 
-    reveals.forEach((el, i) => {
+    reveals.forEach((el) => {
       const windowHeight = window.innerHeight;
       const elementTop = el.getBoundingClientRect().top;
 
       if (elementTop < windowHeight - 100) {
-        setTimeout(() => {
-          el.classList.add("active");
-        }, i * 120);
+        el.classList.add("active");
       }
     });
   }
 
-  // FIX: show content on load
   window.addEventListener("load", revealOnScroll);
   window.addEventListener("scroll", revealOnScroll);
 </script>
