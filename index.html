@@ -39,10 +39,11 @@
       margin-bottom: 30px;
     }
 
-    .projects {
-      display: grid;
-      gap: 25px;
-    }
+  .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
 
     .card {
       background: rgba(30, 41, 59, 0.6);
@@ -51,7 +52,14 @@
       border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.05);
       transition: 0.3s;
+
     }
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
     .card:hover {
       transform: translateY(-8px);
