@@ -21,12 +21,10 @@
     header h1 {
       font-size: 42px;
       margin-bottom: 10px;
-      letter-spacing: 1px;
     }
 
     header p {
       color: #94a3b8;
-      font-size: 16px;
     }
 
     section {
@@ -39,23 +37,10 @@
       text-align: center;
       font-size: 26px;
       margin-bottom: 30px;
-      position: relative;
     }
 
-    h2::after {
-      content: "";
-      width: 60px;
-      height: 3px;
-      background: #38bdf8;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 5px;
-    }
-
-    /* PROJECT GRID */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
@@ -69,7 +54,7 @@
     }
 
     .card:hover {
-      transform: translateY(-8px) scale(1.01);
+      transform: translateY(-8px);
       border: 1px solid #38bdf8;
     }
 
@@ -77,48 +62,26 @@
       margin-top: 0;
     }
 
-    .tag {
-      display: inline-block;
-      background: rgba(56,189,248,0.15);
-      padding: 5px 10px;
-      margin: 5px 5px 10px 0;
-      border-radius: 20px;
-      font-size: 12px;
-      color: #38bdf8;
+    .desc {
+      color: #94a3b8;
+      margin-bottom: 10px;
     }
 
-    .buttons a {
+    .card p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .card a {
       display: inline-block;
-      margin-right: 10px;
       margin-top: 10px;
-      padding: 8px 14px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .buttons a:first-child {
-      background: #38bdf8;
-      color: #020617;
-    }
-
-    .buttons a.secondary {
-      border: 1px solid #38bdf8;
       color: #38bdf8;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.05);
+      text-decoration: none;
+      font-weight: 500;
     }
 
     .contact {
       text-align: center;
-    }
-
-    .contact p {
-      margin: 10px 0;
     }
 
     .contact a {
@@ -156,18 +119,8 @@
 <section class="reveal">
   <h2>About Me</h2>
   <p style="text-align:center; max-width:600px; margin:auto;">
-    I am a passionate UI/UX designer with hands-on experience in wireframing,
-    prototyping, and high-fidelity design using Figma. I enjoy solving user problems
-    by creating simple, intuitive, and visually appealing digital experiences.
-  </p>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-    I completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>, where I worked
-    on real-world projects, improved usability, and contributed to better user interface designs.
-  </p>
-  <p style="text-align:center; max-width:600px; margin:auto;">
-    Previously, I worked as a <strong>Quality Controller at Integra Software Solutions</strong>,
-    which helped me develop strong attention to detail and a quality-focused mindset.
-  </p>
+    I am a UI/UX designer focused on creating clean and user-friendly digital experiences.
+    I enjoy improving existing designs and making interfaces simple, clear, and easy to use.
   </p>
 </section>
 
@@ -177,60 +130,33 @@
   <div class="projects">
 
     <div class="card">
-      <h3>Mobile App UX Improvement</h3>
-      <p>
-        Worked on improving an existing mobile app where users faced confusion in navigation.
-        I simplified the layout and restructured the flow to make the experience more intuitive.
-      </p>
-
-      <div class="tag">UX Design</div>
-      <div class="tag">Figma</div>
-      <div class="tag">User Flow</div>
-
-      <p><strong>Outcome:</strong> Cleaner interface with better navigation and improved usability.</p>
-
-      <div class="buttons">
-        <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
-        <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Dashboard UI Design</h3>
-      <p>
-        Designed a dashboard interface focusing on clarity and ease of use.
-        Organized content and visual hierarchy to help users quickly understand information.
-      </p>
-
-      <div class="tag">UI Design</div>
-      <div class="tag">Dashboard</div>
-      <div class="tag">Visual Design</div>
-
-      <p><strong>Outcome:</strong> Structured and visually clean design that improves readability.</p>
-
-      <div class="buttons">
-        <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
-        <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
-      </div>
-    </div>
-
-    <div class="card">
       <h3>Website Redesign</h3>
-      <p>
-        Redesigned an existing website to improve user experience and overall layout.
-        Focused on simplifying navigation and making the interface more accessible.
-      </p>
+      <p class="desc">Redesigned an existing website by improving usability and user flow.</p>
+      <p><strong>Problem:</strong> The original design had confusing navigation and poor structure.</p>
+      <p><strong>Solution:</strong> Improved layout hierarchy and simplified navigation.</p>
+      <p><strong>Design Approach:</strong> Focused on clean UI and readability.</p>
+      <p><strong>Outcome:</strong> Better user experience and improved clarity.</p>
+      <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
+    </div>
 
-      <div class="tag">UX Improvement</div>
-      <div class="tag">Redesign</div>
-      <div class="tag">Usability</div>
+    <div class="card">
+      <h3>Modern Website Redesign</h3>
+      <p class="desc">Updated an outdated website into a modern and visually appealing design.</p>
+      <p><strong>Problem:</strong> Old UI with low visual appeal.</p>
+      <p><strong>Solution:</strong> Applied modern layout and typography.</p>
+      <p><strong>Design Approach:</strong> Minimal and structured design system.</p>
+      <p><strong>Outcome:</strong> More engaging and professional interface.</p>
+      <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
+    </div>
 
-      <p><strong>Outcome:</strong> More user-friendly experience with smoother navigation.</p>
-
-      <div class="buttons">
-        <a href="YOUR_PORTFOLIO_LINK" target="_blank">View Design</a>
-        <a href="YOUR_FIGMA_LINK" target="_blank" class="secondary">Figma File</a>
-      </div>
+    <div class="card">
+      <h3>Makeup Artist Website</h3>
+      <p class="desc">Designed a complete website to showcase services and portfolio.</p>
+      <p><strong>Problem:</strong> No strong online presence.</p>
+      <p><strong>Solution:</strong> Created a clean and elegant website.</p>
+      <p><strong>Design Approach:</strong> Visual-focused and simple navigation.</p>
+      <p><strong>Outcome:</strong> Improved branding and user engagement.</p>
+      <a href="https://www.figma.com/" target="_blank">View Prototype →</a>
     </div>
 
   </div>
