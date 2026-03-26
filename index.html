@@ -123,16 +123,30 @@
       color: #444;
     }
 
-    .project a {
-      display: inline-block;
+    .project-links {
       margin-top: 12px;
+    }
+
+    .link-btn {
+      margin-right: 15px;
       color: #00adb5;
       text-decoration: none;
       font-weight: 500;
     }
 
-    .project a:hover {
-      letter-spacing: 0.5px;
+    .figma-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #f1f5f9;
+      color: #333;
+      text-decoration: none;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    .figma-btn:hover {
+      background: #00adb5;
+      color: white;
     }
 
     /* CONTACT */
@@ -189,10 +203,10 @@
 <header class="reveal">
   <h1>Hi, I'm Pouvithira 👋</h1>
   <p>
-  I design intuitive and user-centered digital experiences that solve real problems.<br>
-  Passionate about simplifying complex ideas through clean, functional interfaces.<br>
-  Focused on creating meaningful designs that improve usability and engagement.
-</p>
+    I design intuitive and user-centered digital experiences that solve real problems.<br>
+    Passionate about simplifying complex ideas through clean, functional interfaces.<br>
+    Focused on creating meaningful designs that improve usability and engagement.
+  </p>
 
   <div class="btn-group">
     <a href="#projects" class="btn primary">View Projects</a>
@@ -206,22 +220,19 @@
 
   <p>
     I am a passionate UI/UX designer with hands-on experience in wireframing,
-    prototyping, and high-fidelity design using Figma. I enjoy solving user problems
-    by creating simple, intuitive, and visually appealing digital experiences.
+    prototyping, and high-fidelity design using Figma.
   </p>
 
   <p>
-    I completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>, where I worked
-    on real-world projects, improved usability, and contributed to better user interface designs.
+    I completed my UI/UX internship at <strong>Duhzine IT Solutions</strong>.
   </p>
 
   <p>
-    Previously, I worked as a <strong>Quality Controller at Integra Software Solutions</strong>,
-    which helped me develop strong attention to detail and a quality-focused mindset.
+    Previously worked as a <strong>Quality Controller at Integra Software Solutions</strong>.
   </p>
 
   <h3>Skills</h3>
-  <p>UI Design, UX Design, Wireframing, Prototyping, User Research, Usability Improvement</p>
+  <p>UI Design, UX Design, Wireframing, Prototyping, User Research</p>
 
   <h3>Tools</h3>
   <p>Figma, Adobe XD, HTML, CSS</p>
@@ -231,92 +242,44 @@
 <section id="projects" class="reveal">
   <h2>Projects</h2>
 
- <div class="project">
-  <h3>Website Redesign</h3>
-  <p class="desc">
-    Redesigned an existing website by analyzing usability issues and improving overall user flow.
-    The goal was to create a more intuitive and structured experience for users.
-  </p>
+  <div class="project">
+    <h3>Website Redesign</h3>
+    <p class="desc">Improved usability and navigation.</p>
+    <p><strong>Problem:</strong> Confusing layout and poor structure.</p>
+    <p><strong>Solution:</strong> Improved hierarchy and simplified navigation.</p>
+    <p><strong>Outcome:</strong> Better user experience.</p>
 
-  <p><strong>Problem:</strong>  
-    The original website had confusing navigation, poor visual hierarchy, and inconsistent spacing,
-    making it difficult for users to find important information quickly.
-  </p>
-
-  <p><strong>Solution:</strong>  
-    I restructured the layout with clear sections, improved navigation flow, and applied better spacing
-    and alignment principles to guide users naturally through the interface.
-  </p>
-
-  <p><strong>Design Approach:</strong>  
-    Focused on simplicity, readability, and consistency. Used clean UI patterns and improved typography
-    to enhance clarity and user experience.
-  </p>
-
-  <p><strong>Outcome:</strong>  
-    The redesign resulted in a more user-friendly interface with improved accessibility,
-    better engagement, and a visually balanced layout.
-  </p>
-
-  <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3&p=f&t=kLSE9dO3QnSVqEcZ-0&scaling=min-zoom&content-scaling=fixed&page-id=3%3A2&starting-point-node-id=4%3A3" target="_blank">View Prototype →</a>
-</div>
+    <div class="project-links">
+      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3" target="_blank" class="link-btn">View Prototype →</a>
+      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+    </div>
+  </div>
 
   <div class="project">
-  <h3>Modern Website Redesign</h3>
-  <p class="desc">
-    Transformed an outdated website into a modern, visually appealing interface with improved usability.
-  </p>
+    <h3>Modern Website Redesign</h3>
+    <p class="desc">Modern UI transformation.</p>
+    <p><strong>Problem:</strong> Outdated design.</p>
+    <p><strong>Solution:</strong> Clean modern layout.</p>
+    <p><strong>Outcome:</strong> Better engagement.</p>
 
-  <p><strong>Problem:</strong>  
-    The previous design lacked modern UI elements, had poor typography, and did not follow current design trends,
-    resulting in low visual appeal and engagement.
-  </p>
-
-  <p><strong>Solution:</strong>  
-    Introduced a modern layout system, improved typography, and created a consistent design language
-    to enhance both aesthetics and usability.
-  </p>
-
-  <p><strong>Design Approach:</strong>  
-    Used a minimal and clean style with proper spacing, alignment, and hierarchy.
-    Focused on improving readability and visual balance across all sections.
-  </p>
-
-  <p><strong>Outcome:</strong>  
-    The updated design feels more professional, modern, and engaging,
-    significantly improving the overall user experience.
-  </p>
-
-  <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225&p=f&t=kLSE9dO3QnSVqEcZ-0&scaling=min-zoom&content-scaling=fixed&page-id=192%3A223&starting-point-node-id=192%3A225" target="_blank">View Prototype →</a>
-</div>
+    <div class="project-links">
+      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225" target="_blank" class="link-btn">View Prototype →</a>
+      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+    </div>
+  </div>
 
   <div class="project">
-  <h3>Makeup Artist Website</h3>
-  <p class="desc">
-    Designed a complete website for a makeup artist to showcase services, portfolio, and contact details.
-  </p>
+    <h3>Makeup Artist Website</h3>
+    <p class="desc">Designed service showcase website.</p>
+    <p><strong>Problem:</strong> No online presence.</p>
+    <p><strong>Solution:</strong> Elegant design.</p>
+    <p><strong>Outcome:</strong> Strong brand identity.</p>
 
-  <p><strong>Problem:</strong>  
-    The client did not have a professional online presence, making it difficult to attract and engage potential customers.
-  </p>
-
-  <p><strong>Solution:</strong>  
-    Created a visually appealing and easy-to-navigate website that highlights services, showcases work,
-    and allows users to easily connect with the artist.
-  </p>
-
-  <p><strong>Design Approach:</strong>  
-    Focused on visual storytelling with clean layouts, elegant typography, and image-focused sections
-    to highlight the artist’s work effectively.
-  </p>
-
-  <p><strong>Outcome:</strong>  
-    The final design provides a strong digital presence, improves credibility,
-    and makes it easier for clients to explore services and make contact.
-  </p>
-
-  <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943&p=f&t=kLSE9dO3QnSVqEcZ-0&scaling=min-zoom&content-scaling=fixed&page-id=315%3A942&starting-point-node-id=315%3A943" target="_blank">View Prototype →</a>
-</div>
+    <div class="project-links">
+      <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943" target="_blank" class="link-btn">View Prototype →</a>
+      <a href="https://www.figma.com/" target="_blank" class="figma-btn">Figma File</a>
+    </div>
+  </div>
 
 </section>
 
@@ -351,6 +314,8 @@
     });
   }
 
+  // FIX: show content on load
+  window.addEventListener("load", revealOnScroll);
   window.addEventListener("scroll", revealOnScroll);
 </script>
 
