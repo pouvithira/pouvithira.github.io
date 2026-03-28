@@ -29,7 +29,7 @@
 
     section {
       padding: 50px 20px;
-      max-width: 1100px; /* slightly wider for better grid */
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -39,15 +39,14 @@
       margin-bottom: 30px;
     }
 
-    /* ✅ GRID FIX */
+    /* ✅ GRID */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 25px;
-      align-items: stretch;
     }
 
-    /* ✅ CARD FIX */
+    /* ✅ CARD */
     .card {
       background: rgba(30, 41, 59, 0.6);
       backdrop-filter: blur(10px);
@@ -79,28 +78,28 @@
       font-size: 14px;
     }
 
-    /* ✅ BUTTON ALIGN FIX */
+    /* ✅ BUTTON ALIGN */
     .card a {
       margin-top: auto;
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 12px;
       color: #38bdf8;
       text-decoration: none;
       font-weight: 500;
     }
 
-    /* ✅ MOBILE PREVIEW ALIGN FIX */
+    /* ✅ MOBILE PREVIEW */
     .mobile-preview {
       display: flex;
-      gap: 12px;
+      gap: 15px;
       overflow-x: auto;
       padding: 10px 0;
       margin-top: 10px;
     }
 
     .mobile-preview img {
-      width: 160px;
-      border-radius: 18px;
+      width: 180px;
+      border-radius: 20px;
       flex-shrink: 0;
       border: 2px solid rgba(255,255,255,0.1);
     }
@@ -137,8 +136,9 @@
 <body>
 
 <header class="reveal">
-  <h1>Pouvithira</h1>
-  <p>UI/UX Designer | Creating intuitive and user-friendly experiences</p>
+  <h1>Pouvithira V</h1>
+  <p>UI/UX Designer | Open to opportunities</p>
+  <p>Creating intuitive and user-friendly experiences</p>
 </header>
 
 <section class="reveal">
@@ -170,7 +170,37 @@
 <section class="reveal">
   <h2>Projects</h2>
 
+  <!-- ✅ FIXED STRUCTURE -->
   <div class="projects">
+
+    <div class="card">
+
+      <h3>Job Search Mobile App – UX Case Study</h3>
+
+      <p class="desc">
+        Designed a mobile app that enables users to easily create profiles, explore job opportunities, and apply with a smooth and guided experience.
+      </p>
+
+      <p><strong>Problem:</strong> Users experienced difficulty in completing onboarding and navigating job listings, leading to confusion and drop-offs.</p>
+
+      <p><strong>Solution:</strong> Introduced a clear step-by-step onboarding flow and simplified job browsing with structured layout and intuitive navigation.</p>
+
+      <p><strong>Design Approach:</strong> Focused on a guided user journey — from sign up, profile completion, and job discovery to final success feedback — using a clean and minimal interface.</p>
+
+      <p><strong>Outcome:</strong> Improved user experience with smoother navigation, reduced confusion, and a faster job application process.</p>
+
+      <div class="mobile-preview">
+        <img src="Image Login page.png" alt="Signup Screen">
+        <img src="Image Info page.png" alt="Profile Screen">
+        <img src="Image Home page.png" alt="Job Listing Screen">
+        <img src="Image Job details page.png" alt="Job details Screen">
+        <img src="Image submit page.png" alt="Success Screen">
+      </div>
+
+      <a href="https://www.figma.com/proto/EztdVZKxaErNZIHpEkE2XK/Chart?node-id=265-111&p=f&t=xD1bW9l5CAGeRy77-0&scaling=scale-down&content-scaling=fixed&page-id=200%3A96&starting-point-node-id=200%3A97&show-proto-sidebar=1">View Prototype</a>
+      <a href="https://github.com/pouvithira/pouvithira.github.io/blob/main/README.md">Case Study</a>
+
+    </div>
 
     <div class="card">
       <h3>Website Redesign</h3>
@@ -200,26 +230,6 @@
       <p><strong>Design Approach:</strong> Visual-focused and simple navigation.</p>
       <p><strong>Outcome:</strong> Improved branding and user engagement.</p>
       <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943" target="_blank">View Prototype →</a>
-    </div>
-
-    <div class="card">
-      <h3>Job Search Mobile App – UX Case Study</h3>
-      <p class="desc">
-        Designed a mobile application that helps users easily create a profile, explore job opportunities, and complete applications smoothly.
-      </p>
-      <p><strong>Problem:</strong> Users struggled with complex onboarding and unclear job navigation, which made the application process slow and confusing.</p>
-      <p><strong>Solution:</strong> Redesigned the user flow with a simple step-by-step onboarding process and a clear, structured job browsing experience.</p>
-      <p><strong>Design Approach:</strong> Focused on guiding users through a seamless journey — from sign up and profile completion to job discovery and application success — using a clean and minimal UI.</p>
-      <p><strong>Outcome:</strong> Improved usability with a smoother flow, reduced user confusion, and a faster, more engaging job application experience.</p>
-
-      <div class="mobile-preview">
-        <img src="signup.png">
-        <img src="profile.png">
-        <img src="jobs.png">
-        <img src="success.png">
-      </div>
-
-      <a href="YOUR_FIGMA_LINK" target="_blank">View Full Case Study →</a>
     </div>
 
   </div>
