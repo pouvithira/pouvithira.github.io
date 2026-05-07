@@ -64,10 +64,22 @@
       font-size:15px;
       font-weight:500;
       transition:0.3s;
+      position:relative;
     }
 
-    .nav-links a:hover{
-      color:#000;
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0%;
+      height:2px;
+      background:#111827;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
     }
 
     /* HERO */
@@ -183,16 +195,16 @@
       border:1px solid #e5e7eb;
       border-radius:28px;
       padding:40px;
-      transition:0.4s;
+      transition:0.35s ease;
       box-shadow:0 4px 25px rgba(0,0,0,0.04);
     }
 
     .project-card:hover{
-      transform:translateY(-6px);
+      transform:translateY(-8px);
       box-shadow:0 20px 40px rgba(0,0,0,0.08);
     }
 
-    /* MOBILE APP PROJECT */
+    /* MOBILE PROJECT */
 
     .mobile-project{
       display:grid;
@@ -201,7 +213,7 @@
       align-items:center;
     }
 
-    /* WEBSITE PROJECTS SIDE BY SIDE */
+    /* WEBSITE PROJECTS */
 
     .website-projects{
       display:grid;
@@ -214,22 +226,27 @@
       border:1px solid #e5e7eb;
       border-radius:24px;
       padding:28px;
-      transition:0.3s;
+      transition:0.35s ease;
       box-shadow:0 4px 20px rgba(0,0,0,0.03);
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
 
     .website-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 16px 35px rgba(0,0,0,0.08);
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
     }
 
     /* TEXT */
 
     .project-text h3,
     .website-card h3{
-      font-size:28px;
+      font-size:30px;
       margin-bottom:18px;
       line-height:1.2;
+      color:#111827;
     }
 
     .website-card h3{
@@ -248,26 +265,60 @@
       font-size:16px;
     }
 
-    /* LINKS */
+    /* FIGMA BUTTON */
 
-    .project-links{
-      margin-top:25px;
+    .figma-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+
+      padding:12px 18px;
+
+      border-radius:14px;
+
+      border:1px solid #e5e7eb;
+
+      background:#fff;
+
+      text-decoration:none;
+
+      color:#111827;
+
+      font-weight:600;
+
+      transition:0.3s;
+
+      margin-top:16px;
     }
 
-    .project-links a{
+    .figma-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .figma-btn img{
+      width:20px;
+      height:20px;
+    }
+
+    /* CASE STUDY BUTTON */
+
+    .case-btn{
       display:inline-block;
-      margin-right:20px;
+      margin-top:16px;
+      margin-left:10px;
+
       text-decoration:none;
+
       color:#111827;
       font-weight:600;
-      transition:0.3s;
     }
 
-    .project-links a:hover{
+    .case-btn:hover{
       opacity:0.7;
     }
 
-    /* SCROLLABLE MOBILE IMAGES */
+    /* SCROLLABLE IMAGES */
 
     .project-images{
       display:flex;
@@ -411,10 +462,10 @@
 
       <h1>Pouvithira V</h1>
 
-      <p>UI/UX Designer | Open to opportunities</p>
+      <p>UI/UX Designer focused on creating clean and user-centered experiences.</p>
 
       <p>
-        Creating intuitive and user-friendly experiences
+        Creating intuitive and visually engaging digital products
       </p>
 
       <div class="hero-btns">
@@ -493,21 +544,21 @@
 
           <p><strong>Outcome:</strong> Improved user experience with smoother navigation, reduced confusion, and a faster job application process.</p>
 
-          <div class="project-links">
+          <a href="https://www.figma.com/proto/EztdVZKxaErNZIHpEkE2XK/Chart?node-id=265-111&p=f&t=xD1bW9l5CAGeRy77-0&scaling=scale-down&content-scaling=fixed&page-id=200%3A96&starting-point-node-id=200%3A97&show-proto-sidebar=1" target="_blank" class="figma-btn">
 
-            <a href="https://www.figma.com/proto/EztdVZKxaErNZIHpEkE2XK/Chart?node-id=265-111&p=f&t=xD1bW9l5CAGeRy77-0&scaling=scale-down&content-scaling=fixed&page-id=200%3A96&starting-point-node-id=200%3A97&show-proto-sidebar=1">
-              View Prototype →
-            </a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
 
-            <a href="https://github.com/pouvithira/pouvithira.github.io/blob/main/README.md">
-              Case Study →
-            </a>
+            Figma Prototype
 
-          </div>
+          </a>
+
+          <a href="https://github.com/pouvithira/pouvithira.github.io/blob/main/README.md" class="case-btn">
+            Case Study →
+          </a>
 
         </div>
 
-        <!-- SCROLLABLE MOBILE IMAGES -->
+        <!-- SCROLLABLE IMAGES -->
 
         <div class="project-images">
 
@@ -525,7 +576,7 @@
 
       </div>
 
-      <!-- WEBSITE PROJECTS SIDE BY SIDE -->
+      <!-- WEBSITE PROJECTS -->
 
       <div class="website-projects">
 
@@ -533,27 +584,31 @@
 
         <div class="website-card">
 
-          <h3>Website Redesign</h3>
+          <div>
 
-          <p class="desc">
-            Redesigned an existing website by improving usability and user flow.
-          </p>
+            <h3>Website Redesign</h3>
 
-          <p><strong>Problem:</strong> The original design had confusing navigation and poor structure.</p>
+            <p class="desc">
+              Redesigned an existing website by improving usability and user flow.
+            </p>
 
-          <p><strong>Solution:</strong> Improved layout hierarchy and simplified navigation.</p>
+            <p><strong>Problem:</strong> The original design had confusing navigation and poor structure.</p>
 
-          <p><strong>Design Approach:</strong> Focused on clean UI and readability.</p>
+            <p><strong>Solution:</strong> Improved layout hierarchy and simplified navigation.</p>
 
-          <p><strong>Outcome:</strong> Better user experience and improved clarity.</p>
+            <p><strong>Design Approach:</strong> Focused on clean UI and readability.</p>
 
-          <div class="project-links">
-
-            <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3" target="_blank">
-              View Prototype →
-            </a>
+            <p><strong>Outcome:</strong> Better user experience and improved clarity.</p>
 
           </div>
+
+          <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=4-3" target="_blank" class="figma-btn">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+
+            Figma Prototype
+
+          </a>
 
         </div>
 
@@ -561,27 +616,31 @@
 
         <div class="website-card">
 
-          <h3>Modern Website Redesign</h3>
+          <div>
 
-          <p class="desc">
-            Updated an outdated website into a modern and visually appealing design.
-          </p>
+            <h3>Modern Website Redesign</h3>
 
-          <p><strong>Problem:</strong> Old UI with low visual appeal.</p>
+            <p class="desc">
+              Updated an outdated website into a modern and visually appealing design.
+            </p>
 
-          <p><strong>Solution:</strong> Applied modern layout and typography.</p>
+            <p><strong>Problem:</strong> Old UI with low visual appeal.</p>
 
-          <p><strong>Design Approach:</strong> Minimal and structured design system.</p>
+            <p><strong>Solution:</strong> Applied modern layout and typography.</p>
 
-          <p><strong>Outcome:</strong> More engaging and professional interface.</p>
+            <p><strong>Design Approach:</strong> Minimal and structured design system.</p>
 
-          <div class="project-links">
-
-            <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225" target="_blank">
-              View Prototype →
-            </a>
+            <p><strong>Outcome:</strong> More engaging and professional interface.</p>
 
           </div>
+
+          <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=192-225" target="_blank" class="figma-btn">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+
+            Figma Prototype
+
+          </a>
 
         </div>
 
@@ -589,27 +648,31 @@
 
         <div class="website-card">
 
-          <h3>Makeup Artist Website</h3>
+          <div>
 
-          <p class="desc">
-            Designed a complete website to showcase services and portfolio.
-          </p>
+            <h3>Makeup Artist Website</h3>
 
-          <p><strong>Problem:</strong> No strong online presence.</p>
+            <p class="desc">
+              Designed a complete website to showcase services and portfolio.
+            </p>
 
-          <p><strong>Solution:</strong> Created a clean and elegant website.</p>
+            <p><strong>Problem:</strong> No strong online presence.</p>
 
-          <p><strong>Design Approach:</strong> Visual-focused and simple navigation.</p>
+            <p><strong>Solution:</strong> Created a clean and elegant website.</p>
 
-          <p><strong>Outcome:</strong> Improved branding and user engagement.</p>
+            <p><strong>Design Approach:</strong> Visual-focused and simple navigation.</p>
 
-          <div class="project-links">
-
-            <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943" target="_blank">
-              View Prototype →
-            </a>
+            <p><strong>Outcome:</strong> Improved branding and user engagement.</p>
 
           </div>
+
+          <a href="https://www.figma.com/proto/8DTOSlsfZ3FqkrFoJG2bWl/Untitled?node-id=315-943" target="_blank" class="figma-btn">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+
+            Figma Prototype
+
+          </a>
 
         </div>
 
@@ -669,7 +732,7 @@
     © 2026 Pouvithira | UI/UX Designer
   </footer>
 
-  <!-- REVEAL SCRIPT -->
+  <!-- REVEAL ANIMATION -->
 
   <script>
 
