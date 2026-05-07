@@ -40,7 +40,7 @@
       justify-content:space-between;
       align-items:center;
 
-      padding:20px 8%;
+      padding:18px 8%;
 
       background:rgba(255,255,255,0.92);
       backdrop-filter:blur(12px);
@@ -56,7 +56,8 @@
 
     .nav-links{
       display:flex;
-      gap:28px;
+      align-items:center;
+      gap:26px;
       list-style:none;
     }
 
@@ -84,10 +85,35 @@
       width:100%;
     }
 
+    /* HIRE ME BUTTON */
+
+    .hire-btn{
+      background:#111827;
+      color:white !important;
+
+      padding:10px 18px;
+
+      border-radius:12px;
+
+      font-size:13px !important;
+      font-weight:600 !important;
+
+      transition:0.3s ease;
+    }
+
+    .hire-btn:hover{
+      transform:translateY(-2px);
+      background:#000000;
+    }
+
+    .hire-btn::after{
+      display:none;
+    }
+
     /* HERO */
 
     header{
-      min-height:88vh;
+      min-height:72vh;
 
       display:flex;
       justify-content:center;
@@ -117,7 +143,7 @@
     }
 
     .hero-btns{
-      margin-top:38px;
+      margin-top:34px;
     }
 
     .hero-btns a{
@@ -142,31 +168,10 @@
       transform:translateY(-2px);
     }
 
-    .secondary-btn{
-      margin-left:12px;
-
-      border:1px solid #e4e4e7;
-
-      color:#111827;
-
-      padding:10px 18px;
-
-      border-radius:12px;
-
-      font-size:13px;
-      font-weight:600;
-    }
-
-    .secondary-btn:hover{
-      background:#111827;
-      color:white;
-      border-color:#111827;
-    }
-
     /* SECTION */
 
     section{
-      padding:100px 20px;
+      padding:65px 20px;
       max-width:1180px;
       margin:auto;
     }
@@ -176,7 +181,7 @@
       font-size:34px;
       font-weight:600;
       letter-spacing:-1px;
-      margin-bottom:60px;
+      margin-bottom:42px;
     }
 
     /* ABOUT */
@@ -194,7 +199,7 @@
     }
 
     .about h3{
-      margin-top:34px;
+      margin-top:28px;
       margin-bottom:10px;
       font-size:18px;
       font-weight:600;
@@ -205,7 +210,7 @@
     .projects{
       display:flex;
       flex-direction:column;
-      gap:34px;
+      gap:30px;
     }
 
     .project-card{
@@ -426,10 +431,11 @@
 
     footer{
       text-align:center;
-      padding:34px;
+      padding:30px;
       color:#71717a;
       border-top:1px solid #f3f4f6;
       font-size:13px;
+      margin-top:20px;
     }
 
     /* REVEAL */
@@ -468,6 +474,12 @@
 
       .nav-links{
         gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      header{
+        min-height:60vh;
       }
 
       header h1{
@@ -490,6 +502,10 @@
         max-width:100%;
       }
 
+      section{
+        padding:55px 20px;
+      }
+
     }
 
   </style>
@@ -505,10 +521,21 @@
     <div class="logo">Pouvithira</div>
 
     <ul class="nav-links">
+
       <li><a href="#">Home</a></li>
+
       <li><a href="#about">About</a></li>
+
       <li><a href="#projects">Projects</a></li>
+
       <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <a href="mailto:pouvithira@gmail.com" class="hire-btn">
+          Hire Me
+        </a>
+      </li>
+
     </ul>
 
   </nav>
@@ -533,10 +560,6 @@
 
         <a href="#projects" class="primary-btn">
           View Projects
-        </a>
-
-        <a href="resume.pdf" class="secondary-btn">
-          Download Resume
         </a>
 
       </div>
@@ -754,7 +777,7 @@
 
     <h2>Let's Work Together</h2>
 
-    <p style="text-align:center; color:#71717a; margin-bottom:30px;">
+    <p style="text-align:center; color:#71717a; margin-bottom:26px;">
       Feel free to reach out for UI/UX opportunities or collaborations.
     </p>
 
