@@ -279,13 +279,13 @@
   opacity:0.7;
 }
 
-/* MOBILE APP IMAGES */
+/* PROJECT IMAGES */
 
 .project-images{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,1fr);
   gap:18px;
-  align-items:center;
+  align-items:start;
 }
 
 .project-images img{
@@ -297,6 +297,14 @@
 
 .project-images img:hover{
   transform:scale(1.03);
+}
+
+@media(max-width:600px){
+
+  .project-images{
+    grid-template-columns:1fr;
+  }
+
 }
 
 /* RESPONSIVE */
@@ -530,11 +538,17 @@
 
       <div class="project-images">
 
-        <img src="Image Login page.png" alt="Login Screen">
+  <img src="Image Login page.png" alt="Signup Screen">
 
-        <img src="Image Home page.png" alt="Home Screen">
+  <img src="Image Info page.png" alt="Profile Screen">
 
-      </div>
+  <img src="Image Home page.png" alt="Job Listing Screen">
+
+  <img src="Image Job details page.png" alt="Job Details Screen">
+
+  <img src="Image submit page.png" alt="Success Screen">
+
+</div>
 
     </div>
 
